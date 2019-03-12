@@ -92,3 +92,20 @@ export abstract class ColorMapper extends Mapper<Color> {
                                    palette: Arrayable<T>, colors: {nan_color: T}): void
 }
 ColorMapper.initClass()
+
+/*
+get_scale(target_range: Range1d): Scale {
+  const ranges = {
+    source_range: new Range1d({start: this.low, end: this.high}),
+    target_range,
+  }
+
+  switch (this.model.color_mapper.type) {
+    case "LinearColorMapper": return new LinearScale(ranges)
+    case "LogColorMapper":    return new LogScale(ranges)
+    case "EqHistColorMapper": return new LerpScale(ranges, scan_result)
+    default:
+      throw new Error("unreachable code")
+  }
+}
+*/
